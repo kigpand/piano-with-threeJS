@@ -14,12 +14,12 @@ import Ra_ from '../../audio/ra_.mp3';
 import Si from '../../audio/si.mp3';
 
 export default class KeyBoard extends KeyBoardElement{
-    private name: string;
     private music: HTMLAudioElement;
+    name: string;
 
-    constructor(name: string, music: string, parent: HTMLElement) {
-        super(name, parent);
-        this.name = name;
+    constructor(music: string, parent: HTMLElement) {
+        super(music, parent);
+        this.name = music;
         this.music = this.makeAudio(music);
 
         this.element.addEventListener('click', () => {
@@ -58,7 +58,11 @@ export default class KeyBoard extends KeyBoardElement{
         }
     }
 
-    getName() {
-        return this.name;
+    getCode() {
+        return this.music;
+    }
+
+    play() {
+        this.music.play();
     }
 }
