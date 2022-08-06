@@ -24,6 +24,13 @@ module.exports = {
           loader: "ts-loader",
         },
       },
+      {
+        test: /\.(mp3|opp)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'audio/[name].[ext]?[hash]'
+        }
+      }
     ],
   },
   resolve: {
