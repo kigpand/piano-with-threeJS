@@ -21,10 +21,6 @@ export default class KeyBoard extends KeyBoardElement{
         super(music, parent);
         this.name = music;
         this.music = this.makeAudio(music);
-
-        this.element.addEventListener('click', () => {
-            this.music.play();
-        });
     }
 
     makeAudio(music: string) {
@@ -63,6 +59,7 @@ export default class KeyBoard extends KeyBoardElement{
     }
 
     play() {
-        this.music.play();
+        const music = this.makeAudio(this.name);
+        music.play();
     }
 }
