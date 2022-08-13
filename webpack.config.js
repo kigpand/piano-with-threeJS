@@ -30,6 +30,10 @@ module.exports = {
         options: {
           name: 'audio/[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ],
   },

@@ -1,4 +1,5 @@
 import PainoBody from './components/PainoBody/PainoBody';
+import './styles/style.css';
 
 function test() {
     const container = document.querySelector('.container');
