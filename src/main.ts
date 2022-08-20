@@ -1,4 +1,5 @@
 import PainoBody from './components/PainoBody/PainoBody';
+import space from './components/Map/Space/space';
 import './styles/style.css';
 
 function test() {
@@ -37,3 +38,4 @@ function test() {
 }
 
 test();
+space();
