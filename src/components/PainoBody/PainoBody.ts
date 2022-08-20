@@ -9,7 +9,7 @@ export default class PainoBody {
         this.paino.className = 'paino';
         this.keyboardList = [];
 
-        document.body.appendChild(this.paino);
+        document.querySelector('.container').appendChild(this.paino);
     }
 
     init() {

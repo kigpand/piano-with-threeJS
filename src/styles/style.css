@@ -1,6 +1,59 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.paino {
+    display: flex;
+    position: relative;
+}
+
 .keyboard {
-    width: 30px;
-    height: 100px;
+    background-color: white;
+    width: 50px;
+    height: 200px;
     border: 1px solid black;
     border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.keyboardDo_,
+.keyboardRe_,
+.keyboardPa_,
+.keyboardSol_,
+.keyboardRa_{
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background-color: black;
+    color:white;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.keyboardDo_ {
+    left: 35px;
+}
+
+.keyboardRe_ {
+    left: 90px;
+}
+
+.keyboardPa_ {
+    left: 190px;
+}
+
+.keyboardSol_ {
+    left: 245px;
+}
+
+.keyboardRa_ {
+    left: 295px;
 }

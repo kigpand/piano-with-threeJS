@@ -59,6 +59,10 @@ export default class KeyBoard extends KeyBoardElement{
     }
 
     play() {
+        this.element.style.backgroundColor = 'pink';
+        setTimeout(() => {
+            this.element.style.backgroundColor = this.name.lastIndexOf('_') === -1 ? 'white' : 'black';
+        }, 500);
         const music = this.makeAudio(this.name);
         music.play();
     }
