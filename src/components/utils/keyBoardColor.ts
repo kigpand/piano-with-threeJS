@@ -1,0 +1,15 @@
+export const keyBoardColor = {
+  Do: "#ff0000",
+  Do_: "#b42c2c",
+  HighDo: "#6d0606",
+  Re: "#ffd95b",
+  Re_: "#8d731b",
+  Me: "#d87524",
+  Pa: "#34ff34",
+  Pa_: "#189b18",
+  Sol: "#3e4bff",
+  Sol_: "#202794",
+  Ra: "#1e086d",
+  Ra_: "#180a49",
+  Si: "#d608ff",
+};
