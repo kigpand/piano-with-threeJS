@@ -1,3 +1,4 @@
+import { KeyBoradType, MusicType, keyboardSet } from "../../data/keyboardSet";
 import KeyBoard from "../Keyboard/keyboard";
 
 export default class PainoBody {
@@ -13,22 +14,12 @@ export default class PainoBody {
   }
 
   init() {
-    this.keyboardList.push(new KeyBoard("Do", "a", this.paino));
-    this.keyboardList.push(new KeyBoard("Do_", "w", this.paino));
-    this.keyboardList.push(new KeyBoard("Re", "s", this.paino));
-    this.keyboardList.push(new KeyBoard("Re_", "e", this.paino));
-    this.keyboardList.push(new KeyBoard("Me", "d", this.paino));
-    this.keyboardList.push(new KeyBoard("Pa", "f", this.paino));
-    this.keyboardList.push(new KeyBoard("Pa_", "t", this.paino));
-    this.keyboardList.push(new KeyBoard("Sol", "g", this.paino));
-    this.keyboardList.push(new KeyBoard("Sol_", "y", this.paino));
-    this.keyboardList.push(new KeyBoard("Ra", "h", this.paino));
-    this.keyboardList.push(new KeyBoard("Ra_", "u", this.paino));
-    this.keyboardList.push(new KeyBoard("Si", "j", this.paino));
-    this.keyboardList.push(new KeyBoard("HighDo", "k", this.paino));
+    keyboardSet.forEach((board: KeyBoradType) => {
+      this.keyboardList.push(new KeyBoard(board.music, board.key, this.paino));
+    });
   }
 
-  getKeyBoard(key: string) {
+  getKeyBoard(key: MusicType) {
     return this.keyboardList.find(
       (keyboard: KeyBoard) => keyboard.name === key
     );
